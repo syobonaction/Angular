@@ -1,0 +1,43 @@
+body {
+  font-family: calibri, helvetica, sans-serif;
+  font-size: 1em;
+  color: #fff;
+}
+
+input {
+  display: inline;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+li {
+  height: 100px;
+  display: block;
+  padding: 20px;
+  background-color: #81d8d0;
+  border-radius: 5px;
+}
+
+#info {
+  float: left;
+  width: 100px;
+}
+
+.toEdit {
+  color: #fff;
+  padding: 10px;
+  background-color: #ff7373;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.toMain {
+  color: #fff;
+  padding: 10px;
+  background-color: #0066FF;
+  border: 0px;
+  border-radius: 5px;
+}
