@@ -3,6 +3,12 @@ var myApp = angular.module('myApp',[]);
 
 myApp.controller('mainController', function(){
   this.people = people;
+
+  this.sortList = function(){
+    people = people.reverse();
+    console.log(people);
+  }
+
 });
 
 var people = [];
@@ -13,7 +19,7 @@ var person = {
 }
 var person2 = {
   "name" : "Ilker",
-  "age" : 100,
+  "age" : 35,
   "editing" : false
 }
 var person3 = {
@@ -21,7 +27,13 @@ var person3 = {
   "age" : 17,
   "editing" : false
 }
+var person4 = {
+  "name" : "Diane",
+  "age" : 63,
+  "editing" : false
+}
 people.push(person);
 people.push(person2);
 people.push(person3);
+people.push(person4);
 })();

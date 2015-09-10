@@ -4,6 +4,10 @@ body {
   color: #fff;
 }
 
+h3 {
+  color: #000;
+}
+
 input {
   display: inline;
 }
@@ -26,7 +30,8 @@ li {
   width: 300px;
 }
 
-.toEdit,.toMain {
+.btnEdit,.btnSave,.btnSort {
+  width: 100px;
   color: #fff;
   padding: 10px;
   background-color: #ff7373;
@@ -34,10 +39,14 @@ li {
   border-radius: 5px;
 }
 
-.toEdit {
+.btnEdit {
   background-color: #ff7373;
 }
 
-.toMain {
+.btnSave {
   background-color: #0066FF;
+}
+
+.btnSort {
+  background-color: #8866FF;
 }

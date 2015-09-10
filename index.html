@@ -15,16 +15,17 @@
           <div id="info">
             <p ng-hide="person.editing" ng-model="person.name">Name: {{person.name}}</p>
             <p ng-hide="person.editing" ng-model="person.age">Age: {{person.age}}</p>
-            <p ng-show="person.editing"><label>Name: </label><input type="text" ng-model="person.name" /></p>
-            <p ng-show="person.editing"><label>Age: </label><input type="text" ng-model="person.age"/></p>
+            <p ng-show="person.editing">Name: <input type="text" ng-model="person.name" /></p>
+            <p ng-show="person.editing">Age: <input type="text" ng-model="person.age"/></p>
           </div>
-          <p ng-hide="person.editing" ><button class="toEdit" ng-click="person.editing=true">Edit</button></p>
-          <p ng-show="person.editing" ><button class="toMain" ng-click="person.editing=false">Save</button></p>
+          <p ng-hide="person.editing" ><button class="btnEdit" ng-click="person.editing=true">Edit</button></p>
+          <p ng-show="person.editing" ><button class="btnSave" ng-click="person.editing=false">Save</button></p>
 
         </li>
       </ul>
-
-      <span style="color: #000000;">{{people}}</span>
+      <button class="btnSort" ng-click="container.sortList()">Sort</button>
+      <h3>Data</h3>
+      <span style="color: #000000;">{{container.people}}</span>
     </div>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
