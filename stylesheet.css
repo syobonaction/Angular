@@ -23,10 +23,10 @@ li {
 
 #info {
   float: left;
-  width: 100px;
+  width: 300px;
 }
 
-.toEdit {
+.toEdit,.toMain {
   color: #fff;
   padding: 10px;
   background-color: #ff7373;
@@ -34,10 +34,10 @@ li {
   border-radius: 5px;
 }
 
+.toEdit {
+  background-color: #ff7373;
+}
+
 .toMain {
-  color: #fff;
-  padding: 10px;
   background-color: #0066FF;
-  border: 0px;
-  border-radius: 5px;
 }

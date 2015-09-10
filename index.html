@@ -9,20 +9,21 @@
   </head>
 
   <body>
-    <div ng-controller="mainController">
-      <ul ng-repeat="person in people">
+    <div ng-controller="mainController as container">
+      <ul ng-repeat="person in container.people">
         <li>
           <div id="info">
-            <p ng-hide="editing" ng-model="person.name">Name: {{person.name}}</p>
-            <p ng-hide="editing" ng-model="person.age">Age: {{person.age}}</p>
-            <p ng-show="editing"><label>Name: </label><input type="text" ng-model="person.name" /></p>
-            <p ng-show="editing"><label>Age: </label><input type="text" ng-model="person.age"/></p>
+            <p ng-hide="person.editing" ng-model="person.name">Name: {{person.name}}</p>
+            <p ng-hide="person.editing" ng-model="person.age">Age: {{person.age}}</p>
+            <p ng-show="person.editing"><label>Name: </label><input type="text" ng-model="person.name" /></p>
+            <p ng-show="person.editing"><label>Age: </label><input type="text" ng-model="person.age"/></p>
           </div>
+          <p ng-hide="person.editing" ><button class="toEdit" ng-click="person.editing=true">Edit</button></p>
+          <p ng-show="person.editing" ><button class="toMain" ng-click="person.editing=false">Save</button></p>
 
         </li>
       </ul>
-      <p ng-hide="editing" ><button class="toEdit" ng-click="editMode()">Edit</button></p>
-      <p ng-show="editing" ><button class="toMain" ng-click="editMode()">Save</button></p>
+
       <span style="color: #000000;">{{people}}</span>
     </div>
 
