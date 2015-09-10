@@ -1,3 +1,4 @@
+(function(){
 var myApp = angular.module('myApp',[]);
 
 myApp.controller('mainController', function(){
@@ -23,3 +24,4 @@ var person3 = {
 people.push(person);
 people.push(person2);
 people.push(person3);
+})();
